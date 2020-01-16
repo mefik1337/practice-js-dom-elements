@@ -11,4 +11,17 @@ const buttonSettings = {
         color: '#444'
     },
     text: 'Click me!',
-}
+};
+
+const getButtonSettings = () => {
+    const button = document.querySelector('button');
+    const {attr:{className, title}, css:{border, padding, color}, text} = buttonSettings;
+        button.setAttribute('class', className);
+        button.setAttribute('title', title);
+        button.style.border = border;
+        button.style.padding = padding;
+        button.style.color = color;
+        button.innerText = text;
+};
+
+getButtonSettings();
